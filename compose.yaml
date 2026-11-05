@@ -1,0 +1,12 @@
+services:
+  worker:
+    build:
+      context: .
+    environment:
+      SHARED_DIR: /shared
+    volumes:
+      - shared-data:/shared
+
+volumes:
+  shared-data:
+    name: unix-practical2-shared
